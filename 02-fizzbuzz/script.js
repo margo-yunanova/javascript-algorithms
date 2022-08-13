@@ -7,13 +7,40 @@
  * • кратные трём — на fizz;
  * • кратные пяти — на buzz;
  * • кратные и трём, и пяти одновременно — на fizzbuzz.
- * 
+ *
 */
-
-function fizzBuzz(num) {
-    // Напишите код здесь
+function getNumberFizzBuzz(digit) {
+  if ((digit % 3 === 0) && (digit % 5 === 0)) {
+    digit = 'fizzbuzz';
+  } else if (digit % 3 === 0) {
+    digit = 'fizz';
+  } else if (digit % 5 === 0) {
+    digit = 'buzz';
+  }
+  return digit;
 }
 
-// Протестируйте решение, вызывая функцию с разными аргументами:
+function fizzBuzz(num) {
+  for (let i = 1; i <= num; i++) {
+    console.log(getNumberFizzBuzz(i));
+  }
+}
 
-console.log(fizzBuzz(15));
+fizzBuzz(30);
+
+// function fizzBuzz(num) {
+//   let digit = 0;
+//   for (let i = 1; i <= num; i++) {
+//     digit = i;
+//     if ((i % 3 === 0) && (i % 5 === 0)) {
+//       digit = 'fizzbuzz';
+//     } else if (i % 3 === 0) {
+//       digit = 'fizz';
+//     } else if (i % 5 === 0) {
+//       digit = 'buzz';
+//     }
+//     console.log(digit);
+//   }
+// }
+
+// fizzBuzz(30);
