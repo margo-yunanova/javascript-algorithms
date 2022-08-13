@@ -13,7 +13,6 @@
  * 
 */
 
-
 function palindrome(str) {
     let reverseStr = '';
     for (let i = str.length - 1; i >= 0; i--) {
@@ -21,7 +20,6 @@ function palindrome(str) {
     }
     return str.toLowerCase() === reverseStr.toLowerCase(); 
 }
-
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
@@ -35,3 +33,27 @@ console.log(palindrome('привет')); // false
  * palindrome('О, лета тело!'); // true
  * 
 */
+
+function isPunctuationMarks(letter) {
+    return letter === ' ' || letter === '!' || letter === ',';
+}
+
+function clearPunctuationMarks(string) {
+    let onlyLetters = '';
+    for (let i = 0; i < string.length; i++) {
+        if (isPunctuationMarks(string[i])) continue;
+        onlyLetters = onlyLetters + string[i];
+    }
+    return onlyLetters;
+}
+
+function palindromeBonus(strBonus) {
+    return palindrome(clearPunctuationMarks(strBonus)); 
+}
+
+// Протестируйте решение, вызывая функцию с разными аргументами:
+
+console.log(palindromeBonus('Лидер бредил')); 
+console.log(palindromeBonus('Учуя молоко, я около мяучу'));
+console.log(palindromeBonus('Sum summus mus'));
+console.log(palindromeBonus('It looks like anything to me'));
