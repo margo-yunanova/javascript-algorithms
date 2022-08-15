@@ -11,13 +11,12 @@
 function reverseWords(str) {
   let arr = str.split(' ');
   let reverseStr = '';
-  for(let i = arr.length - 1; i >= 0; i--) {
+  for (let i = arr.length - 1; i >= 0; i--) {
     if (reverseStr !== '') {
-      reverseStr = reverseStr + ' '
+      reverseStr += ' ';
     }
-    reverseStr = reverseStr + arr[i];
+    reverseStr += arr[i];
   }
-   console.log(typeof(reverseStr));
   return reverseStr;
 }
 
