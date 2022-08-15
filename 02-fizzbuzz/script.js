@@ -20,6 +20,24 @@ function getNumberFizzBuzz(digit) {
   return digit;
 }
 
+function getNumberFizzBuzz2(digit) {
+  if ((digit % 3 === 0) && (digit % 5 === 0)) {
+    return 'fizzbuzz';
+  } else if (digit % 3 === 0) {
+    return 'fizz';
+  } else if (digit % 5 === 0) {
+    return 'buzz';
+  }
+  return digit;
+}
+
+function getNumberFizzBuzz3(digit) {
+  return ((digit % 3 === 0) && (digit % 5 === 0)) ? 'fizzbuzz' :
+          (digit % 3 === 0) ? 'fizz' :
+          (digit % 5 === 0) ? 'buzz' :
+           digit;
+}
+
 function fizzBuzz(num) {
   for (let i = 1; i <= num; i++) {
     console.log(getNumberFizzBuzz(i));
