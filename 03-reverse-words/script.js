@@ -1,3 +1,5 @@
+// @ts-check
+
 /*
  * Задача 3: «Развернуть слова в предложении»
  *
@@ -7,6 +9,12 @@
  * или оставить — на ваше усмотрение.
  *
 */
+
+/**
+ * put words in reverse order
+ * @param {string} str
+ * @returns
+ */
 
 function reverseWords(str) {
   let arr = str.split(' ');

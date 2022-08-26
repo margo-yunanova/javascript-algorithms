@@ -1,3 +1,5 @@
+// @ts-check
+
 /*
  * Задача 2: «FizzBuzz»
  *
@@ -9,6 +11,7 @@
  * • кратные и трём, и пяти одновременно — на fizzbuzz.
  *
 */
+
 function getNumberFizzBuzz(digit) {
   if ((digit % 3 === 0) && (digit % 5 === 0)) {
     digit = 'fizzbuzz';
@@ -20,6 +23,10 @@ function getNumberFizzBuzz(digit) {
   return digit;
 }
 
+/**
+ * calc fizzbuzz valie of a number
+ * @param {number} digit
+ */
 function getNumberFizzBuzz2(digit) {
   if ((digit % 3 === 0) && (digit % 5 === 0)) {
     return 'fizzbuzz';
@@ -30,7 +37,11 @@ function getNumberFizzBuzz2(digit) {
   }
   return digit;
 }
-
+/**
+ * calc fizzbuzz value of a number
+ * @param {number} digit
+ * @returns
+ */
 function getNumberFizzBuzz3(digit) {
   return ((digit % 3 === 0) && (digit % 5 === 0)) ? 'fizzbuzz' :
           (digit % 3 === 0) ? 'fizz' :
@@ -38,6 +49,10 @@ function getNumberFizzBuzz3(digit) {
            digit;
 }
 
+/**
+ * print fizzbuzz values for natural numbers from 1 to n
+ * @param {number} num
+ */
 function fizzBuzz(num) {
   for (let i = 1; i <= num; i++) {
     console.log(getNumberFizzBuzz(i));
