@@ -15,7 +15,7 @@
  */
 
 function uniq2(arr) {
-  let newArr = [];
+  const newArr = [];
   outer: for (let i = 0; i < arr.length; i++) {
     const num = arr[i];
     for (let j = 0; j < newArr.length; j++) {
@@ -38,7 +38,7 @@ console.log(uniq2([1, 4, 2, 2, 3, 4, 8]));
  */
 
 function uniq3(arr) {
-  let newArr = [];
+  const newArr = [];
   for (let i = 0; i < arr.length; i++) {
     let numInNewArr = false;
     for (let j = 0; j < newArr.length; j++) {
@@ -81,7 +81,7 @@ function isNumberInArray(number, array) {
  */
 
 function uniq(arr) {
-  let newArr = [];
+  const newArr = [];
   // for(let i = 0; i < arr.length; i++) {
   //   if (isNumberInArray(arr[i], newArr)) continue;
   //   newArr.push(arr[i]);

@@ -60,7 +60,7 @@ console.log(findVowels('парадигма'));
 
 function findVowels2(str) {
   let countVowels = 0;
-  let arrayVowels = ['а', 'я', 'о', 'ё', 'у', 'ю', 'ы', 'и', 'э', 'е'];
+  const arrayVowels = ['а', 'я', 'о', 'ё', 'у', 'ю', 'ы', 'и', 'э', 'е'];
   str = str.toLowerCase();
   for (let i = 0; i < str.length; i++) {
     for (let j = 0; j < arrayVowels.length; j++) {

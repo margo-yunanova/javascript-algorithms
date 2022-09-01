@@ -1,3 +1,5 @@
+// @ts-check
+
 /*
  * Задача 14: «Простые числа»
  *
@@ -29,7 +31,7 @@ function isPrime(number) {
  * @returns {number[]}
  */
 function primes(num) {
-  let arrayPrimes = [];
+  const arrayPrimes = [];
   for (let i = 2; i <= num; i++) {
     if (isPrime(i)) {
       arrayPrimes.push(i);
