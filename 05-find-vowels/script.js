@@ -79,3 +79,37 @@ console.log(findVowels2('здравствуй'));
 console.log(findVowels2('привет'));
 console.log(findVowels2('хеллоу'));
 console.log(findVowels2('парадигма'));
+
+/**
+ *
+ * @param {string} str
+ * @returns {number}
+ */
+
+const vowels1 = ['а', 'я', 'о', 'ё', 'у', 'ю', 'ы', 'и', 'э', 'е'];
+
+
+function findVowels3(str) {
+  return str.split('').filter(item => vowels1.includes(item)).length;
+}
+
+console.log(findVowels3('здравствуй'));
+console.log(findVowels3('привет'));
+console.log(findVowels3('хеуллоу'));
+
+
+const vowels = ["а", "я", "о", "ё", "у", "ю", "ы", "и", "э", "е"];
+
+/**
+ *
+ * @param {string} str
+ * @returns {number}
+ */
+
+function findVowels4(str) {
+  return str.split('').reduce((countVowels, char) => vowels.includes(char) ? countVowels + 1 : countVowels, 0);
+}
+
+console.log(findVowels4("здравствуй"));
+console.log(findVowels4("привет"));
+console.log(findVowels4("хеелоу"));

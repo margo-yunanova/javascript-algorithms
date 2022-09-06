@@ -30,3 +30,17 @@ function reverseWords(str) {
 
 console.log(reverseWords('всегда много путей достичь цель есть')); // "есть цель достичь путей много всегда"
 console.log(reverseWords('испробовать их все должны вы')); // "вы должны все их испробовать"
+
+/**
+ *
+ * @param {string} str
+ * @returns {string}
+ */
+
+function reverseWords1(str) {
+  return str.replace(",", " ").split(" ").reverse().join(" ");
+}
+
+console.log(reverseWords1("всегда много путей достичь цель есть"));
+console.log(reverseWords1("испробовать их все должны вы"));
+console.log(reverseWords1("испробовать, их все должны вы"));
