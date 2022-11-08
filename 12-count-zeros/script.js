@@ -7,7 +7,15 @@
 */
 
 function countZeros(n) {
-    // Напишите код здесь
+  let quantityZero = 0;
+  for (let i = 1; i <= n; i++) {
+    for (let symbol of String(i)) {
+      if (symbol === '0') {
+        quantityZero++;
+      }
+    }
+  }
+  return quantityZero;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
