@@ -17,21 +17,7 @@
  * @returns {boolean}
  */
 
-function anagram(str1, str2) {
-  if (str1.toLowerCase() === str2.toLowerCase() || str1.length !== str2.length) {
-    return false;
-  }
-  const arr1 = str1.toLowerCase().split('').sort();
-  const arr2 = str2.toLowerCase().split('').sort();
-  for (let i = 0; i <= arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-  return true;
-}
-
-// TODO: переделать в строку
+ const anagram = (str1, str2) => str1.toLowerCase() !== str2.toLowerCase() && str1.toLowerCase().split('').sort().join() === str2.toLowerCase().split('').sort().join();
 
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
