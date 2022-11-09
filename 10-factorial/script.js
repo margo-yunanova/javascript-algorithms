@@ -9,14 +9,13 @@
 
 function factorial(n) {
   let factorial = 1;
-    if (n === 0 || n === 1) {
-      return factorial;
-    }
-    for (let i = 2; i <= n; i++) {
-      factorial *= i;
-    }
-    return factorial;
+  for (let i = 2; i <= n; i++) {
+    factorial *= i;
+  }
+  return factorial;
 }
+
+// TODO: декларация типов ts check
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
