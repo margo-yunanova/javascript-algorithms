@@ -1,3 +1,5 @@
+// @ts-check
+
 /*
  * Задача 12: «Посчитать количество нулей»
  *
@@ -6,8 +8,21 @@
  *
 */
 
+/**
+ * @param {number} n
+ * @returns {number} quantityZero
+ */
+
 function countZeros(n) {
-    // Напишите код здесь
+  let quantityZero = 0;
+  for (let i = 1; i <= n; i++) {
+    for (const symbol of String(i)) {
+      if (symbol === '0') {
+        quantityZero++;
+      }
+    }
+  }
+  return quantityZero;
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
