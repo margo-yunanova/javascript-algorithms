@@ -9,7 +9,7 @@
 function countZeros(n) {
   let quantityZero = 0;
   for (let i = 1; i <= n; i++) {
-    for (let symbol of String(i)) {
+    for (const symbol of String(i)) {
       if (symbol === '0') {
         quantityZero++;
       }
@@ -17,6 +17,8 @@ function countZeros(n) {
   }
   return quantityZero;
 }
+
+// TODO: декларация типов
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
