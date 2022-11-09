@@ -1,3 +1,5 @@
+// @ts-check
+
 /*
  * Задача 10: «Факториал»
  *
@@ -7,6 +9,11 @@
  *
 */
 
+/**
+ * @param {number} n
+ * @returns {number} factorial
+ */
+
 function factorial(n) {
   let factorial = 1;
   for (let i = 2; i <= n; i++) {
@@ -14,8 +21,6 @@ function factorial(n) {
   }
   return factorial;
 }
-
-// TODO: декларация типов ts check
 
 // Протестируйте решение, вызывая функцию с разными аргументами:
 
