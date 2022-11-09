@@ -12,7 +12,7 @@
 /**
  * @param {number[]} arr1
  * @param {number[]} arr2
- * @returns {number[]} newArr
+ * @returns {number[]}
  */
 
 function intersection(arr1, arr2) {

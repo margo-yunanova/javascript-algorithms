@@ -19,9 +19,9 @@ function capitalize2(str) {
   let char;
   for (let i = 0; i < str.length; i++) {
     if (str[i] === ' ') {
-      char = i
+      char = i;
     }
-    capitalStr = capitalStr + str[i]
+    capitalStr = capitalStr + str[i];
   }
   return capitalStr;
 }

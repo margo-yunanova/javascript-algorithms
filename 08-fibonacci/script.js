@@ -13,12 +13,13 @@
 /**
  *
  * @param {number} n
+ * @returns {number}
  */
 
 function fibonacci(n) {
   let first = 0;
   let second = 1;
-  let third;
+  let third = 0;
   if (n === 1) {
     return 0;
   } else if (n === 2) {

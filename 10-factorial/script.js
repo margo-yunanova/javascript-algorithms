@@ -11,7 +11,7 @@
 
 /**
  * @param {number} n
- * @returns {number} factorial
+ * @returns {number}
  */
 
 function factorial(n) {

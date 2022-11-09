@@ -82,11 +82,6 @@ function isNumberInArray(number, array) {
 
 function uniq(arr) {
   const newArr = [];
-  // for(let i = 0; i < arr.length; i++) {
-  //   if (isNumberInArray(arr[i], newArr)) continue;
-  //   newArr.push(arr[i]);
-  // }
-
   for (let i = 0; i < arr.length; i++) {
     if (!isNumberInArray(arr[i], newArr)) {
       newArr.push(arr[i]);

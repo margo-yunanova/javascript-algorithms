@@ -30,6 +30,7 @@ function isPrime(number) {
  * @param {number} num
  * @returns {number[]}
  */
+
 function primes(num) {
   const arrayPrimes = [];
   for (let i = 2; i <= num; i++) {

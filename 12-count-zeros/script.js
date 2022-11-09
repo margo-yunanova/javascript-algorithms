@@ -10,7 +10,7 @@
 
 /**
  * @param {number} n
- * @returns {number} quantityZero
+ * @returns {number}
  */
 
 function countZeros(n) {

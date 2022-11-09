@@ -41,7 +41,7 @@ function isVowel(char) {
  * @returns {number} count of vowels
  */
 
- function findVowels(str) {
+function findVowels(str) {
   let countVowels = 0;
   str = str.toLowerCase();
   for (let i = 0; i < str.length; i++) {
