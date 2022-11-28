@@ -11,13 +11,7 @@ const isSpace = (symbol) => symbol === '';
 function formatWords(words) {
   if (words === null || !words.join()) return '';
 
-  let arr = [];
-
-  for (const word of words) {
-    if (!isSpace(word)) {
-      arr.push(word);
-    }
-  }
+  const arr = words.filter(word => !isSpace(word));
 
   return arr.length === 1 ? arr.join() : `${arr.slice(0, arr.length - 1).join(', ')} and ${arr[arr.length - 1]}`;
 }
