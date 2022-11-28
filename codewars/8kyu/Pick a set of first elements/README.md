@@ -2,8 +2,6 @@
 
 [task link](https://www.codewars.com/kata/572b77262bedd351e9000076/train/javascript)
 
-[solution link - не опубликовала]()
-
 Write a function to get the first element(s) of a sequence. Passing a parameter n (default=1) will return the first n element(s) of the sequence.
 
 If n == 0 return an empty sequence []

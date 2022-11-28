@@ -1,4 +1,4 @@
-const first = (arr, n = 1) => n === 1 ? [arr[0]] : arr.slice(0, n)
+const first = (arr, n = 1) => arr.slice(0, n)
 
 
 const arr = ['a', 'b', 'c', 'd', 'e'];
