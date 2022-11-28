@@ -1,5 +1,9 @@
 # Deutschstunde
 
+[task link](https://www.codewars.com/kata/552cd8624a414ec2b2000086/train/javascript)
+
+[solution link - не опубликовала]()
+
 Everybody knows a little german, right? But remembering the correct articles is a tough job. Write yourself a little helper, that returns the noun with the matching article:
 
 - each noun containing less than 2 vowels has the article "das"
