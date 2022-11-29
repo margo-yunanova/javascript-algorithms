@@ -5,7 +5,7 @@
  * @returns {boolean}
  */
 
-const isVowel = (letter) => ["a", "e", 'i', 'o', 'u', 'ä', 'ö', 'ü'].includes(letter);
+const isVowel = (letter) => 'aeiouäöü'.includes(letter);
 
 /**
  *
@@ -14,10 +14,9 @@ const isVowel = (letter) => ["a", "e", 'i', 'o', 'u', 'ä', 'ö', 'ü'].includes
  */
 
 function derDieDas(wort) {
-  const arr = wort.toLowerCase().split('');
   let countVowels = 0;
 
-  for (let letter of arr) {
+  for (const letter of wort.toLowerCase()) {
     if (isVowel(letter)) {
       countVowels++;
     }
