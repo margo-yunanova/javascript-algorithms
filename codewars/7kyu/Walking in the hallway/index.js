@@ -8,29 +8,36 @@
 function contact(hallway) {
   const arr = [];
 
-  outer: for (let i = 0; i < hallway.length; i++) {
+  for (let i = 0; i < hallway.length; i++) {
     if (hallway[i] === '>') {
-      for (let k = i + 1; k < hallway.length; k++) {
-        if (hallway[k] === '<') {
-          arr.push(k - i);
-          continue outer;
-        }
+      let space = hallway.indexOf('<', i) - i;
+      if (space > 0) {
+        arr.push(space);
       }
     }
-
   }
 
-  if (Math.min(...arr) === 0) {
-    return 1;
-  } else if (arr.length === 0) {
-    return -1;
-  } else {
-    return (Math.ceil(Math.min(...arr) / 2));
-  }
+  return arr.length === 0 ? -1 : Math.ceil(Math.min(...arr) / 2);
 }
 
-// console.log(contact("---->---<"))
-// console.log(contact("----<-->---"))
-// console.log(contact("----><-----"))
-//console.log(contact(">>>>--<<<<<<<<<<<<<<<<<<<<"))
-console.log(contact(">---------<"));
+function contactVar2(hallway) {
+  const arr = [];
+  let arrowRight;
+
+  for (let i = 0; i < hallway.length; i++) {
+    if (hallway[i] === '>') {
+      arrowRight = i;
+    } else if (hallway[i] === '<' && arrowRight !== undefined) {
+      arr.push(i-arrowRight);
+      arrowRight = undefined;
+    }
+  }
+
+  return arr.length === 0 ? -1 : Math.ceil(Math.min(...arr) / 2);
+}
+
+console.log(contact("---->---<"));
+console.log(contact("----<-->---"));
+console.log(contact("----><----->------<----<"));
+console.log(contact(">>>>--<<<<<<<<<<<<<<<<<<<<"))
+console.log(contact("->-----<--------->-------<-------"));
