@@ -1,6 +1,7 @@
 # Frog jumping
 
 [link](https://www.codewars.com/kata/536950ffc8a5ca9982001371/javascript)
+
 [solution link](https://www.codewars.com/kata/reviews/536951379f77fec5760012e5/groups/638b9cd066567c000113b04e)
 
 You have an array of integers and have a frog at the first position
