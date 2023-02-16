@@ -1,8 +1,8 @@
 const getNewArray = (array) => {
-  const newArray = array.length % 2 === 0 ? [...array] : [0, ...array];
-  const arr1 = newArray.slice(0, Math.floor(newArray.length / 2));
-  const arr2 = newArray.slice(Math.floor(newArray.length / 2));
-  return (newArr = arr1.map((number, i) => number + arr2[i]));
+  const newArray = array.length % 2 === 0 ? array : [0, ...array];
+  const arr1 = newArray.slice(0, newArray.length / 2);
+  const arr2 = newArray.slice(newArray.length / 2);
+  return arr1.map((number, i) => number + arr2[i]);
 };
 
 const splitAndAdd = (array, number) => {
