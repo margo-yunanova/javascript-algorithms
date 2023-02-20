@@ -1,6 +1,8 @@
 const gcdi = (a, b) => {
-  const min = Math.abs(Math.min(a, b));
-  const max = Math.abs(Math.max(a, b));
+  a = Math.abs(a);
+  b = Math.abs(b);
+  const min = Math.min(a, b);
+  const max = Math.max(a, b);
 
   if (max % min === 0) {
     return min;
@@ -25,16 +27,6 @@ const max = Math.max;
 
 const min = Math.min;
 
-const operArray = (fct, arr, init) => {
-  let newArr = [];
-  arr.reduce((sum, i) => {
-    sum = fct(sum, i);
-    newArr.push(sum);
+const operArray = (fct, arr, init) => arr.map(item => init = fct(item, init));
 
-    return sum;
-  }, init);
-
-  return newArr;
-};
-
-console.log(operArray(lcmu, [18, 69, -90, -78, 65, 40], 18));
+console.log(operArray(gcdi, [18, 69, -90, -78, 65, 40], 18));
