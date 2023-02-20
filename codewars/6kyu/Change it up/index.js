@@ -3,19 +3,17 @@ const alphabet = "abcdefghijklmnopqrstuvwxyz";
 const isVowels = (letter) => "aeiou".includes(letter);
 const getNextLetter = (letter) => alphabet[alphabet.indexOf(letter) + 1] ?? "a";
 
-const changer = (string) => {
-  let newString = "";
-  for (const letter of string.toLowerCase()) {
-    if (!alphabet.includes(letter)) {
-      newString += letter;
-    } else {
-      const nextLetter = getNextLetter(letter);
-      newString += isVowels(nextLetter)
-        ? nextLetter.toUpperCase()
-        : nextLetter;
-    }
-  }
-  return newString;
-};
+const changer = (string) =>
+  string
+    .toLowerCase()
+    .split("")
+    .map((letter) =>
+      !alphabet.includes(letter)
+        ? letter
+        : isVowels(getNextLetter(letter))
+        ? getNextLetter(letter).toUpperCase()
+        : getNextLetter(letter)
+    )
+    .join("");
 
 console.log(changer("Cat30"));
