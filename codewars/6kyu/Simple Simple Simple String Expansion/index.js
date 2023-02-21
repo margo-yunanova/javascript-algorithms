@@ -1,16 +1,14 @@
-const numbers = '0123456789'
+const numbers = "0123456789";
 
 const stringExpansion = (string) => {
-  let newString = '';
   let number = 1;
-  for (let i = 0; i < string.length; i++) {
-    if (numbers.includes(string[i])) {
-      number = string[i]
-      continue
+  return string.split("").reduce((newStr, char) => {
+    if (numbers.includes(char)) {
+      number = char;
+      return newStr;
     }
-    newString += string[i].repeat(number)
-  }
-  return newString;
-}
+    return newStr + char.repeat(number);
+  }, "");
+};
 
-console.log(stringExpansion('0d0a0v0t0y'));
+console.log(stringExpansion("3d332f2a"));
