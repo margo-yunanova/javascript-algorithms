@@ -1,8 +1,9 @@
 const getMinCut = (people: number) => {
   let total = 0;
   let maxPiece = people;
-  for (total; maxPiece > 1; total++) {
-    maxPiece = Math.max(Math.ceil(maxPiece / 2), Math.floor(maxPiece / 2));
+  while (maxPiece > 1) {
+    total += 1;
+    maxPiece = Math.ceil(maxPiece / 2);
   }
 
   return total;

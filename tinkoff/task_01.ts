@@ -4,9 +4,8 @@ const countCosts = (
   costExtraTariff: number,
   sizeNextMonth: number
 ) => {
-  return sizeInternetTariff >= sizeNextMonth
-    ? totalMoney
-    : (sizeNextMonth - sizeInternetTariff) * costExtraTariff + totalMoney;
+
+  return totalMoney + Math.max(sizeNextMonth - sizeInternetTariff, 0) * costExtraTariff
 };
 
 console.log(countCosts(100, 10, 12, 15));
