@@ -1,9 +1,8 @@
 var readline = require("readline");
 var fs = require("fs");
-const stream = fs.createReadStream("./text.md", { encoding: "utf-8" });
 
 var rl = readline.createInterface({
-  input: stream,
+  input: process.stdin,
   output: process.stdout,
 });
 
