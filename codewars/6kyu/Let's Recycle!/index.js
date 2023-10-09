@@ -6,11 +6,10 @@ function recycle(array) {
     plastic: [],
   }
   
-  for (const obj of array) {
-    for (const prop in obj) {
-      if (prop !== 'type') {
-        bins[obj[prop]].push(obj.type)
-      }
+  for (const { type, material, secondMaterial } of array) {
+    bins[material].push(type);
+    if (secondMaterial) {
+      bins[secondMaterial].push(type);
     }
   }
   
