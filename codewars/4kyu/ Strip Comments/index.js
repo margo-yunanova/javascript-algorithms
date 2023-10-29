@@ -1,8 +1,5 @@
 function solution(input, markers) {
-  const array = input.split('\n');
-  const result = [];
-  
-  for (const string of array) {
+  return input.split('\n').map(string => {
     let minIndex = string.length;    
     for (const marker of markers) {
       const index = string.indexOf(marker);
@@ -10,10 +7,6 @@ function solution(input, markers) {
         minIndex = Math.min(index, minIndex);
       }
     }
-    const newString = string.slice(0, minIndex).trim();
-    
-    result.push(newString)
-  }
-  
-  return result.join('\n')
+    return string.slice(0, minIndex).trim();
+  }).join('\n')
 };
