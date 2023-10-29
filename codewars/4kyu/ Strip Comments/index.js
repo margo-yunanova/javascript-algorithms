@@ -1,12 +1,11 @@
 function solution(input, markers) {
   return input.split('\n').map(string => {
-    let minIndex = string.length;    
-    for (const marker of markers) {
+
+    const minIndex = markers.reduce((minIndex, marker) => {
       const index = string.indexOf(marker);
-      if (index !== -1) {
-        minIndex = Math.min(index, minIndex);
-      }
-    }
+      return index !== -1 ? Math.min(index, minIndex) : minIndex;
+    }, string.length);
+
     return string.slice(0, minIndex).trim();
-  }).join('\n')
+  }).join('\n');
 };
