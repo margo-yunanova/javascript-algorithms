@@ -6,10 +6,10 @@ const isPrime = (n) => {
 }
 
 function gap(g, m, n) {
-  let first = 0;
+  let first = undefined;
   for (let i = m; i <= n; i++) {
     if (isPrime(i)) {
-      if (i - first === g) {
+      if (first && i - first === g) {
         return [first, i];
       }
       first = i;
