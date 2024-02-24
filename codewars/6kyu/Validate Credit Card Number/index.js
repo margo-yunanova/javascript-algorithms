@@ -4,11 +4,8 @@ function validate(n) {
   while (num > 0) {
     const remainder = num % 100;
     result += remainder % 10;
-    let integer = Math.trunc(remainder / 10) * 2;
-    while (integer >= 10) {
-      integer -= 9;
-    }
-    result += integer;
+    const integer = Math.trunc(remainder / 10) * 2;
+    result += integer > 9 ? integer - 9 : integer;
     num = Math.trunc(num / 100);
   }
 
